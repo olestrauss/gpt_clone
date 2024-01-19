@@ -1,2 +1,3 @@
 gptVenv
 .env
+__pycache__
