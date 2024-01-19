@@ -1,0 +1,14 @@
+/* static/style.css */
+#chat {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.message {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
