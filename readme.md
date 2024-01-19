@@ -25,4 +25,10 @@ To install this project, follow these steps:
 
 ## Usage
 
+Also ensure to have your own OpenAPI key in your env (or `.env` file)
+
 To use, either run `main.py` in your IDE of choice, or navigate to the dir, and run `python main.py`.
+
+## TODO 
+
+Styling has to be improved (or rather, has to be started).
