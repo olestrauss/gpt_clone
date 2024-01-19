@@ -13,7 +13,7 @@ def home():
 def get_response():
     user_input = request.form['user_input']
     response = client.get_completion(user_input)
-    return f"Your input was: {response}"
+    return f"OleGPT: {response}"
 
 if __name__ == '__main__':
     app.run(debug=True)
