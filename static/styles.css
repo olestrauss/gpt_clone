@@ -1,14 +1,68 @@
 /* static/style.css */
-#chat {
-    height: 300px;
-    overflow-y: scroll;
-    border: 1px solid #cccccc;
-    padding: 10px;
-    margin-bottom: 10px;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
 }
+
+h1 {
+    color: #4a4a4a;
+}
+
+#chat {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
 .message {
+    padding: 10px;
+    border-radius: 20px;
     margin: 5px 0;
-    padding: 5px;
-    background-color: #f3f3f3;
-    border-radius: 5px;
+    max-width: 80%;
+}
+
+.user {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.gpt {
+    background-color: #e5e5ea;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+}
+
+#chatForm {
+    display: flex;
+}
+
+#userInput {
+    flex-grow: 1;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#chatForm input[type="submit"] {
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#chatForm input[type="submit"]:hover {
+    background-color: #357abd;
 }

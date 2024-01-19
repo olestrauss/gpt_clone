@@ -25,6 +25,9 @@ document.getElementById('chatForm').onsubmit = function(event) {
         gptResponse.className = 'message gpt';
         gptResponse.textContent = 'OleGPT: ' + data.response;
         chatBox.appendChild(gptResponse);
+
+        // Scroll to the latest message
+        chatBox.scrollTop = chatBox.scrollHeight;
     });
 
     // Clear the input field
