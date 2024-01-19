@@ -1,13 +1,20 @@
+<!-- templates/index.html -->
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <title>GPT Clone</title>
-  </head>
-  <body>
-    <h1>GPT Clone Web Interface</h1>
-    <form action="/get_response" method="post">
-      <input type="text" name="user_input" placeholder="Enter your text here" />
-      <input type="submit" value="Get Response" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>OleGPT Chat</h1>
+    <div id="chat" class="chat-box">
+        <!-- Messages will appear here -->
+    </div>
+    <form id="chatForm">
+        <input type="text" name="user_input" id="userInput" placeholder="Enter your text here" />
+        <input type="submit" value="Send" />
     </form>
-  </body>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
 </html>
