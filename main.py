@@ -1,6 +1,6 @@
-from flask import Flask, request, render_template
+# main.py
+from flask import Flask, request, render_template, jsonify
 from gpt_helper import Responder
-import os 
 
 app = Flask(__name__)
 client = Responder()
@@ -13,7 +13,7 @@ def home():
 def get_response():
     user_input = request.form['user_input']
     response = client.get_completion(user_input)
-    return f"OleGPT: {response}"
+    return jsonify({"response": response})
 
 if __name__ == '__main__':
     app.run(debug=True)
