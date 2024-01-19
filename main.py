@@ -1,8 +1,9 @@
-# GPT Clone
-
 from flask import Flask, request, render_template
+from gpt_helper import Responder
+import os 
 
 app = Flask(__name__)
+client = Responder()
 
 @app.route('/')
 def home():
@@ -11,9 +12,8 @@ def home():
 @app.route('/get_response', methods=['POST'])
 def get_response():
     user_input = request.form['user_input']
-    # Here you would process the input through your GPT model
-    # For this example, we'll just echo the input
-    return f"Your input was: {user_input}"
+    response = client.get_completion(user_input)
+    return f"Your input was: {response}"
 
 if __name__ == '__main__':
     app.run(debug=True)
