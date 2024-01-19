@@ -1,4 +1,3 @@
-# main.py
 from flask import Flask, request, render_template, jsonify
 from gpt_helper import Responder
 
