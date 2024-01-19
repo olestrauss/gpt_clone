@@ -2,10 +2,8 @@ import logging
 import asyncio
 import openai
 
-
 logger = logging.getLogger("bot")
 logger.setLevel("DEBUG")
-
 
 class GPT:
     def __init__(self, token, model='gpt-3.5-turbo'):
