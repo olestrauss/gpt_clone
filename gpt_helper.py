@@ -7,13 +7,14 @@ load_dotenv()
 class Responder():
     def __init__(self):
         self.client = OpenAI()
-        self.time_limit = os.getenv('TIME_LIMIT_DAYS')
     
     def get_completion(self, prompt, memory=''):
+        print(memory)
         completion = self.client.chat.completions.create(
             model='gpt-3.5-turbo',
             messages=[
-                {'role': 'system', 'content': 'You are a fork of GPT. If asked who you are, say "I am a fork of GPT made by Ole S."'},
+                {'role': 'system', 'content': 'You are a fork of GPT. If asked who you are, say "I am a fork of GPT made by Ole S." \
+                                               Memory is provided in format "user input --- response"'},
                 {'role': 'assistant', 'content': memory},
                 {'role': 'user', 'content': prompt}
                 
