@@ -38,7 +38,7 @@ class Memory():
     def write_to_memory(self, user_input, response):
         self.current_time = int(time.time())
         self.cursor.execute("INSERT INTO memory (time, interaction) VALUES (?, ?)",
-                            (self.current_time, f'User: {user_input} --- GPT: {response}'))
+                            (self.current_time, f'{user_input} --- {response}'))
         self.connection.commit()
 
     def close(self):
