@@ -5,6 +5,8 @@
 This site uses OpenAI's API and its GPT-3.5-Turbo model. It is in no way its own LLM, rather just a wrapper meant to practice web development.
 The backend uses JS for web functions, and Pythons flask framework.
 
+Persistent memory through SQL database implementation. Remembers past conversations even if app is closed. 
+
 ## Technologies Used
 
 - dotenv
